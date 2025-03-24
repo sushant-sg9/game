@@ -4,52 +4,208 @@ const Game = () => {
   const [gameData, setGameData] = useState({
    
       bucks: 10.00,
-      assets: [
-        {
-          "name": "Studio Apartment",
-          "level": 1,
-          "time": 3,
-          "rent": 2,
-          "cost": 5.25,
-          "inc": 1.1,
-          "onRent": false,
-          "auto": false,
-          "owned": true
-        },
-        {
-          "name": "One-Bedroom Apartment",
-          "level": 0,
-          "time": 6,
-          "rent": 5,
-          "cost": 10.00,
-          "inc": 1.05,
-          "onRent": false,
-          "auto": false,
-          "owned": false
-        },
-        {
-          "name": "Two-Bedroom Apartment",
-          "level": 0,
-          "time": 9,
-          "rent": 10,
-          "cost": 20.00,
-          "inc": 1.15,
-          "onRent": false,
-          "auto": false,
-          "owned": false
-        },
-        {
-          "name": "Townhouse",
-          "level": 0,
-          "time": 12,
-          "rent": 20,
-          "cost": 40.00,
-          "inc": 1.2,
-          "onRent": false,
-          "auto": false,
-          "owned": false
-        }
-      ]
+     "assets": [
+    {
+      "name": "Studio Apartment",
+      "level": 1,
+      "time": 3,
+      "rent": 2,
+      "cost": 5.25,
+      "inc": 1.1,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "One-Bedroom Apartment",
+      "level": 0,
+      "time": 6,
+      "rent": 5,
+      "cost": 10,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Two-Bedroom Apartment",
+      "level": 0,
+      "time": 9,
+      "rent": 10,
+      "cost": 20,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Townhouse",
+      "level": 0,
+      "time": 12,
+      "rent": 20,
+      "cost": 40,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Small Single-Family Home",
+      "level": 0,
+      "time": 15,
+      "rent": 40,
+      "cost": 80,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Condo",
+      "level": 0,
+      "time": 18,
+      "rent": 80,
+      "cost": 160,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Large Single-Family Home",
+      "level": 0,
+      "time": 21,
+      "rent": 160,
+      "cost": 320,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Duplex",
+      "level": 0,
+      "time": 24,
+      "rent": 320,
+      "cost": 640,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Three-Bedroom House",
+      "level": 0,
+      "time": 27,
+      "rent": 640,
+      "cost": 1280,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Four-Bedroom House",
+      "level": 0,
+      "time": 30,
+      "rent": 1280,
+      "cost": 2560,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Luxury Apartment",
+      "level": 0,
+      "time": 33,
+      "rent": 2560,
+      "cost": 5120,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Penthouse",
+      "level": 0,
+      "time": 36,
+      "rent": 5120,
+      "cost": 10240,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Beachfront Property",
+      "level": 0,
+      "time": 39,
+      "rent": 10240,
+      "cost": 20480,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Farmhouse",
+      "level": 0,
+      "time": 42,
+      "rent": 20480,
+      "cost": 40960,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Vacation Property",
+      "level": 0,
+      "time": 45,
+      "rent": 40960,
+      "cost": 81920,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Commercial Retail Space",
+      "level": 0,
+      "time": 48,
+      "rent": 81920,
+      "cost": 163840,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Office Building",
+      "level": 0,
+      "time": 51,
+      "rent": 163840,
+      "cost": 327680,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Industrial Warehouse",
+      "level": 0,
+      "time": 54,
+      "rent": 327680,
+      "cost": 655360,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Multi-Family Residential Building",
+      "level": 0,
+      "time": 57,
+      "rent": 655360,
+      "cost": 1310720,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    },
+    {
+      "name": "Mixed-Use Development",
+      "level": 0,
+      "time": 60,
+      "rent": 1310720,
+      "cost": 2621440,
+      "inc": 1.05,
+      "onRent": false,
+      "auto": false
+    }
+  ]
   })
 
   const [timers, setTimers] = useState({});
