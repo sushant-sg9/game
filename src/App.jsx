@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Game from "./Component/game"
+import Game from "./Component/NewGame"
 
 function App() {
 
